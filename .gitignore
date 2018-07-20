@@ -1,0 +1,17 @@
+.cache
+.mypy_cache
+.tox
+*.pyc
+*.swp
+.coverage
+*.egg-info
+local.cfg
+*Zone.Identifier
+.ipynb_checkpoints
+.idea
+.swo
+*~
+docs/_build
+build
+dist
+.pytest*
