@@ -26,6 +26,8 @@ def get_job(host, port):
 
 def finish_job(node_name, parent_node_name, host, port):
     sem = Semaphore(parent_node_name, host, port)
+    print("Do something -- send up to " + parent_node_name)
+    print(parent_node_name + node_name)
     sem.clear_dependencies(node_name)
 
 

@@ -7,10 +7,12 @@ class Semaphore:
         self._redis = redis.Redis(host=host, port=port)
 
     def add_dependencies(self, *dependency_ids):
+        print("Adding dependencies.")
         for dependency_id in dependency_ids:
             self._redis.sadd(self._name, dependency_id)
 
     def clear_dependencies(self, *dependency_ids):
+        print("Clearing dependencies.")
         for dependency_id in dependency_ids:
             self._redis.srem(self._name, dependency_id)
 
